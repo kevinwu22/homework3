@@ -49,7 +49,7 @@ function genArray (startNumber, endNumber, stepNumber)
     }
 else
 {
-    for(let i=startNumber; i >= endNumber; i = i + stepNumber)
+    for(let i = startNumber; i >= endNumber; i = i + stepNumber)
     {
         generateArray.push(i)
         binaryArray.push(dec2bin(i))
@@ -60,7 +60,7 @@ else
 
 function sumArray (generateArray)
 {
-    const sumArray = generateArray.reduce((total, amount)) => total + amount)
+    const sumArray = generateArray.reduce((total, amount) => total + amount)
     return sumArray;
 }
 
@@ -69,3 +69,9 @@ function dec2bin(dec)
     return (dec >>> 0).string(2);
 }
 
+if (document.getElementById("error").innerHTML != error)
+{
+    document.getElementById("array").innerHTML = "The generated array is" + generateArray;
+    document.getElementById("sum").innerHTML = "The sum is" + sumArray;
+    document.getElementById("binary").innerHTML = "The binary of absolute element values are" + binaryArray;
+}
