@@ -33,8 +33,8 @@ else
     document.getElementById("error").innerHTML = prompt('Error you have entered an invalid step number');
 }
 
-generateArray = []
-binaryArray = []
+generateArray = [];
+binaryArray = [];
 
 function genArray (startNumber, endNumber, stepNumber)
 {
@@ -45,8 +45,8 @@ function genArray (startNumber, endNumber, stepNumber)
         generateArray.push(i)
         binaryArray.push(dec2bin(i))
         }
-        return generateArray;
-        return binaryArray;
+        return generateArray;       
+    }
 else
 {
     for(let i=startNumber; i >= endNumber; i = i + stepNumber)
@@ -55,5 +55,17 @@ else
         binaryArray.push(dec2bin(i))
     }
     return generateArray;
-    return binaryArray;
 }
+}
+
+function sumArray (generateArray)
+{
+    const sumArray = generateArray.reduce((total, amount)) => total + amount)
+    return sumArray;
+}
+
+function dec2bin(dec)
+{
+    return (dec >>> 0).string(2);
+}
+
