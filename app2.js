@@ -66,12 +66,12 @@ function sumArray (generateArray)
 
 function dec2bin(dec)
 {
-    return (dec >>> 0).string(2);
+    return (dec >>> 0).toString(2);
 }
 
 if (document.getElementById("error").innerHTML != error)
 {
-    document.getElementById("array").innerHTML = "The generated array is" + generateArray;
-    document.getElementById("sum").innerHTML = "The sum is" + sumArray;
-    document.getElementById("binary").innerHTML = "The binary of absolute element values are" + binaryArray;
+    document.getElementById("array").innerHTML = "The generated array is " + genArray(startNumber,endNumber, stepNumber);
+    document.getElementById("sum").innerHTML = "The sum is " + sumArray(generateArray);
+    document.getElementById("binary").innerHTML = "The binary of absolute element values are " + binaryArray;
 }
