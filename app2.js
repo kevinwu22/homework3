@@ -32,3 +32,28 @@ else
 {
     document.getElementById("error").innerHTML = prompt('Error you have entered an invalid step number');
 }
+
+generateArray = []
+binaryArray = []
+
+function genArray (startNumber, endNumber, stepNumber)
+{
+    if (stepNumber > 0)
+    {
+        for(let i= startNumber; i <= endNumber; i = i + stepNumber)
+        {
+        generateArray.push(i)
+        binaryArray.push(dec2bin(i))
+        }
+        return generateArray;
+        return binaryArray;
+else
+{
+    for(let i=startNumber; i >= endNumber; i = i + stepNumber)
+    {
+        generateArray.push(i)
+        binaryArray.push(dec2bin(i))
+    }
+    return generateArray;
+    return binaryArray;
+}
