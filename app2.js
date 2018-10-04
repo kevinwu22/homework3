@@ -1,7 +1,7 @@
 const Start = prompt('Please enter your start number:')
 const End = prompt('Please enter your end number:')
 const Step = prompt('Please enter your step number:')
-const Error = prompt('Error, try a different number')
+const Error = prompt('Error, you have entered an invalid number')
 
 const startNumber = Number(Start);
 const endNumber = Number(End);
@@ -13,7 +13,7 @@ if (Number.isInteger(startNumber) && startNumber != 0)
 }
 else
 {
-    let Result = ("Error, try a different start number");
+    document.getElementByID("error").innerHTML = Error;
 }
 
 if (Number.isInteger(endNumber) && endNumber != 0)
@@ -22,7 +22,7 @@ if (Number.isInteger(endNumber) && endNumber != 0)
 }
 else 
 {
-    let Result = ("Error, try a different end number");
+    document.getElementByID("error").innerHTML = Error;
 }
 
 if (Number.isInteger(stepNumber) && stepNumber != 0)
@@ -31,5 +31,5 @@ if (Number.isInteger(stepNumber) && stepNumber != 0)
 }
 else
 {
-    let Result = ("Error, try a different step number");
+    document.getElementByID("error").innerHTML = Error;
 }
